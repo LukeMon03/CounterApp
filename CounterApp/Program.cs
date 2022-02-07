@@ -6,16 +6,20 @@ namespace CounterApp
     {
         static void Main(string[] args)
         {
-            var box1 = new Box<Apple>();
-            box1.Add(new Apple());
-            box1.Add(new Apple());
-            box1.Add(new Apple());
-            box1.Add(new Apple());
-            box1.Add(new Apple());
+            while (0 == 0)
+            {
+                var box1 = new Box<Apple>();
+                box1.Add(new Apple());
+                box1.Add(new Apple());
+                box1.Add(new Apple());
+                box1.Add(new Apple());
+                box1.Add(new Apple());
 
-            var cart = new Cart<ICountable>();
-            cart.Adder(box1);
-            Console.WriteLine(cart.count());
+                var cart = new Cart<Apple>();
+                cart.Adder(box1);
+                Console.WriteLine(cart.Count());
+            }
+            
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace CounterApp
 {
-    class Box<T> where T : ICountable
+    class Box<T> :ICountable where T : ICountable
     {
         public List<T> list = new List<T>();
 
@@ -11,7 +11,7 @@ namespace CounterApp
             list.Add(item);
         }
 
-        public int counter()
+        public int Count()
         {
             return list.Count;
         }

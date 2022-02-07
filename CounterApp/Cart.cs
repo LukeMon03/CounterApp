@@ -3,23 +3,24 @@ using System.Collections.Generic;
 
 namespace CounterApp
 {
-    class Cart<Box> where Box:ICountable
+    class Cart<T> where T:ICountable
     {
-        public List<Box> list = new List<Box>();
+        public List<Box<T>> list = new List<Box<T>>();
 
-        public void Adder(Box item)
+        public void Adder(Box<T> item)
         {
             list.Add(item);
         }
 
-        public int count()
+        public int Count()
         {
+            var count = 0;
             foreach (var box in list)
             {
-                var count = box.Count();
-                Console.WriteLine(count);
+                
+                count += box.Count();
             }
-            return list.Count;
+            return count;
         }
     }
 }
