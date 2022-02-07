@@ -1,25 +1,21 @@
 ﻿using System;
 
-
 namespace CounterApp
 {
     class Program
     {
         static void Main(string[] args)
         {
-            while(0==0) {
-                Counter<string> counterString = new Counter<string>();
-                counterString.Adder("bob");
-                counterString.Adder("is");
-                counterString.Adder("your");
-                counterString.Adder("uncle.");
+            var box1 = new Box<Apple>();
+            box1.Add(new Apple());
+            box1.Add(new Apple());
+            box1.Add(new Apple());
+            box1.Add(new Apple());
+            box1.Add(new Apple());
 
-                Console.WriteLine(counterString.count());
-
-                Counter<int> counterInt = new Counter<int>();
-                counterInt.Adder(3);
-                Console.WriteLine(counterInt.count());
-            }
+            var cart = new Cart<ICountable>();
+            cart.Adder(box1);
+            Console.WriteLine(cart.count());
         }
     }
 }

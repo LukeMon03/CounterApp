@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace CounterApp
 {
-    class Box<T>
+    class Box<T> where T : ICountable
     {
         public List<T> list = new List<T>();
 

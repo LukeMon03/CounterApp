@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CounterApp
+﻿namespace CounterApp
 {
-    class Apple
+    class Apple :ICountable
     {
         public int Count()
         {

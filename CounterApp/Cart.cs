@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace CounterApp
 {
-    class Cart<T> where T:ICountable
+    class Cart<Box> where Box:ICountable
     {
-        public List<T> list = new List<T>();
+        public List<Box> list = new List<Box>();
 
-        public void Adder(T item)
+        public void Adder(Box item)
         {
             list.Add(item);
         }
