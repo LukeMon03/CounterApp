@@ -1,19 +1,21 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace CounterApp
 {
-    class Box<T> :ICountable where T : ICountable
+    class Box
     {
-        public List<T> list = new List<T>();
+        public List<Apple> list = new List<Apple>();
 
-        public void Add(T item)
+        public void Add(Apple item)
         {
             list.Add(item);
         }
 
-        public int Count()
+        public int Count(string color, string breed)
         {
-            return list.Count;
+            return list.Where(apple => apple.color == color && apple.breed == breed).Count();
+
         }
     }
 }
